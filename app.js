@@ -1,9 +1,24 @@
+const notFound = () => {
+    const noResult = document.getElementById("no-result");
+    noResult.innerHTML = `
+        <h3>No Result Found With That Name. Please Try Again With Another Food Name</h3>
+    `;
+    document.getElementById("food-container").innerHTML = "";
+    document.getElementById("search-input").value = "";
+    document.getElementById("food-recipe").innerHTML = "";
+}
+
 const getSearchedFoodDetail = () => {
     const searchInput = document.getElementById("search-input").value;
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
     .then(res => res.json())
     .then(data => {
-        displaySearchedFood(data.meals);
+        if(data.meals){
+            displaySearchedFood(data.meals);
+        }
+        else{
+            notFound();
+        }
     })
 }
 
@@ -13,6 +28,7 @@ const displaySearchedFood = (food) => {
     foodContainer.innerHTML = ""
     document.getElementById("search-input").value = "";
     document.getElementById("food-recipe").innerHTML = "";
+    document.getElementById("no-result").innerHTML = "";
     food.forEach(foodItem => {
         const foodDiv = document.createElement("div");
         foodDiv.className = "food";

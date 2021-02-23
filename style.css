@@ -58,3 +58,6 @@ body {
 #food-recipe ol {
     padding-bottom: 30px;
 }
+#no-result{
+    text-align: center;
+}
