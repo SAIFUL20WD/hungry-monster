@@ -1,0 +1,60 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.search-area {
+    margin: 100px 450px 50px;
+}
+#search-input {
+    width: 300px;
+    padding: 12px;
+    border: 1px solid #f06c4e;
+    background-color: #f8f7f5;
+    outline: #f06c4e;
+}
+#search-btn {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #f06c4e;
+    box-sizing: border-box;
+    padding: 13px;
+    border-radius: 0px 6px 6px 0px;
+    outline: none;
+    border: none;
+    margin: -5px;
+}
+#food-container {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-gap: 30px;
+    justify-content: center;
+}
+.food {
+    background-color: #f8f7f5;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+}
+.food h3 {
+    padding: 10px 0px;
+}
+.food img {
+    border-radius: 10px 10px 0px 0px;
+    width: 250px;
+}
+#food-recipe {
+    width: 450px;
+    margin: 50px 425px;
+    border-radius: 20px;
+    background-color: #f8f7f5;
+}
+#food-recipe img {
+    width: 450px;
+    height: 300px;
+    border-radius: 20px 20px 0px 0px;
+}
+#food-recipe h2, h4{
+    padding-left: 20px;
+}
+#food-recipe ol {
+    padding-bottom: 30px;
+}
